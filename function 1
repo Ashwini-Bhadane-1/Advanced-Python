@@ -1,0 +1,22 @@
+class Product: 
+ def accept(self): 
+   self.Product_id = int(input("Enter Product ID: ")) 
+   self.Product_Name = input("Enter Product Name: ") 
+   self.Product_Qty = int(input("Enter Product Quantity: ")) 
+   self.Product_Price = float(input("Enter Product Price: ")) 
+ def display(self): 
+   print("Product ID:", self.Product_id) 
+   print("Product Name:", self.Product_Name) 
+   print("Product Quantity:", self.Product_Qty) 
+   print("Product Price:", self.Product_Price) 
+   print("------------------------") 
+# Create list to store 3 products 
+products = [] 
+for i in range(3): 
+   print(f"\nEnter details of Product {i+1}") 
+   p = Product() 
+   p.accept() 
+   products.append(p) 
+print("\nProduct Details") 
+for p in products: 
+   p.display()

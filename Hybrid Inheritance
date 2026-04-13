@@ -1,0 +1,19 @@
+class Company:
+  def company_name(self):
+    print("Tech Solutions")
+class Department(Company):
+  def department(self):
+    print("IT Department")
+class TeamLead(Department):
+  def lead(self):
+    print("Team Lead")
+class Manager(Department):
+  def manage(self):
+    print("Manager")
+class ProjectHead(TeamLead, Manager):
+  pass
+ph = ProjectHead()
+ph.company_name()
+ph.department()
+ph.lead()
+ph.manage()

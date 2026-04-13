@@ -1,0 +1,30 @@
+class Restaurant:
+  # Default arguments (fixed meal price)
+  def meal_price(self, rice=50, curry=70):
+    print("Meal Price:", rice + curry)
+  # *args (multiple extra items ordered)
+  def extra_items(self, *items):
+    total = 0
+    for price in items:
+      total += price
+    print("Extra Items Total:", total)
+  # **kwargs (customer details)
+  def customer_details(self, **details):
+    if "name" in details and "table" in details:
+      print(f"Customer: {details['name']}, Table No: {details['table']}")
+    elif "name" in details:
+      print(f"Customer: {details['name']}")
+    else:
+      print("Guest Customer")
+# Object creation
+order = Restaurant()
+# Default arguments
+order.meal_price()
+order.meal_price(60)
+# *args
+order.extra_items(30, 40, 50)
+order.extra_items(25)
+# **kwargs
+order.customer_details(name="Amit")
+order.customer_details(name="Riya", table=5)
+order.customer_details()

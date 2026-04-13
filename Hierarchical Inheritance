@@ -1,0 +1,21 @@
+class BankAccount:
+  def bank_name(self):
+    print("ABC Bank")
+class SavingsAccount(BankAccount):
+  def interest(self):
+    print("Savings Account Interest: 5%")
+class CurrentAccount(BankAccount):
+  def overdraft(self):
+    print("Current Account Overdraft Available")
+class FixedDeposit(BankAccount):
+  def duration(self):
+    print("FD Duration: 5 years")
+s = SavingsAccount()
+c = CurrentAccount()
+f = FixedDeposit()
+s.bank_name()
+s.interest()
+c.bank_name()
+c.overdraft()
+f.bank_name()
+f.duration()

@@ -1,0 +1,7 @@
+def my_generator():
+  for i in range(1, 4):
+    yield i
+gen = my_generator()
+print(next(gen)) # Output: 1
+print(next(gen)) # Output: 2
+print(next(gen)) # Output: 3

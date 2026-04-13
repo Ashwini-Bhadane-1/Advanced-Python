@@ -1,0 +1,16 @@
+#find the most occurring number in a string
+import re
+from collections import Counter
+# Input string
+s = input("Enter a string containing numbers: ")
+# Find all numbers in the string using regex
+numbers = re.findall(r'\d+', s) # \d+ matches one or more digits
+if numbers:
+# Count occurrences of each number
+  count = Counter(numbers)
+# Find the most common number
+  most_common_num, freq = count.most_common(1)[0]
+  print("Most occurring number:", most_common_num)
+  print("Occurrences:", freq)
+else:
+  print("No numbers found in the string.")

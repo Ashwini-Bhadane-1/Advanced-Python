@@ -1,0 +1,19 @@
+# Parent class
+class Payment:
+  def pay(self, amount):
+    print(f"Paying {amount} using a generic payment method.")
+# Child class for Credit Card
+class CreditCard(Payment):
+  def pay(self, amount): # Overriding the parent method
+    print(f"Paying {amount} using Credit Card.")
+# Child class for PayPal
+class PayPal(Payment):
+  def pay(self, amount): # Overriding the parent method
+    print(f"Paying {amount} using PayPal.")
+# Using the classes
+payment1 = Payment()
+payment2 = CreditCard()
+payment3 = PayPal()
+payment1.pay(100) # Generic payment
+payment2.pay(250) # Credit Card payment
+payment3.pay(500) # PayPal payment
